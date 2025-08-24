@@ -7,7 +7,6 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "pessoa")
-@Setter
 @Getter
 public class Pessoa {
 
@@ -18,4 +17,21 @@ public class Pessoa {
 
     @Column(nullable = false, length = 100)
     private String nome;
+
+    // Construtores
+    public Pessoa() {
+    }
+
+    public Pessoa(Long id, String nome) {
+        this.id = id;
+        this.nome = nome;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }

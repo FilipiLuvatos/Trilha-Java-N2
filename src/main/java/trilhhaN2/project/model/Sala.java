@@ -9,9 +9,7 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "sala")
 @Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+
 @EqualsAndHashCode(of = "id")
 public class Sala {
 
@@ -30,4 +28,36 @@ public class Sala {
 
     @Column(name = "dtreservainicio")
     private LocalDate dtReservaInicio;
+
+    // Construtores
+    public Sala() {
+    }
+
+    public Sala(Long id, Status status, String nome, LocalDate dtReservaFim, LocalDate dtReservaInicio) {
+        this.id = id;
+        this.status = status;
+        this.nome = nome;
+        this.dtReservaFim = dtReservaFim;
+        this.dtReservaInicio = dtReservaInicio;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDtReservaFim(LocalDate dtReservaFim) {
+        this.dtReservaFim = dtReservaFim;
+    }
+
+    public void setDtReservaInicio(LocalDate dtReservaInicio) {
+        this.dtReservaInicio = dtReservaInicio;
+    }
 }
