@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 
+@Setter
 @Entity
 @Table(name = "pessoa")
 @Getter
@@ -27,11 +28,4 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 }

@@ -9,7 +9,6 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "seat")
 @Getter
-
 @EqualsAndHashCode(of = "id")
 public class Seat {
     @Id
@@ -25,6 +24,7 @@ public class Seat {
     @Column(name = "dtreservainicio")
     private LocalDate dtReservaInicio;
 
+    @Enumerated(EnumType.STRING) // salva como texto no banco
     @Column(nullable = false, length = 200)
     private Status status;
 

@@ -17,6 +17,7 @@ public class Sala {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // bigserial -> identity
     private Long id;
 
+    @Enumerated(EnumType.STRING) // salva como texto no banco
     @Column(nullable = false, length = 30)
     private Status status;
 
