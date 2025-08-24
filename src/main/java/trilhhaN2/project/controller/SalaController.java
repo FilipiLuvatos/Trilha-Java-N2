@@ -1,6 +1,6 @@
 package trilhhaN2.project.controller;
 
-public class RoomController {
+public class SalaController {
     //Consulta
     //Inserir
     //Deletar
